@@ -16,7 +16,7 @@ function Footer() {
                     return <a key={index} className="socials-link" target="_blank" rel="noopener noreferrer" href={item.url}>{item.name}</a>
                 })}
                 <br/>
-                <a className="socials-link" target="_blank" rel="noopener noreferrer" href="https://github.com/ZineddineBtc/create-portfolio">
+                <a className="socials-link" target="_blank" rel="noopener noreferrer" href="https://github.com/ZineddineBtc/Clound-Notes">
                     Source Code
                 </a>
                 
