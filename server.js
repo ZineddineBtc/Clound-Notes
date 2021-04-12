@@ -36,6 +36,14 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+if(process.env.NODE_ENV === 'production') {
+    // set static folder
+    app.use(express.static('client/build'));
+    app.get('*', (req, res) => {
+      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
+
 ////////////////////////  Login/Register Routes  ////////////////////////
 
 app.post("/isAuthenticated", function(req, res){
