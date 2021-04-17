@@ -1,11 +1,13 @@
 html {
     font-family: "Montserrat", sans-serif;
+    position:relative; 
+    min-height: 100%;
 }
 body {
     background: #eee;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-    padding: 0;
-    margin: 0;
+    margin: 0 0 100px;
+    padding: 0 0 25px;
 }
 
 /************************* Header *************************/
@@ -35,8 +37,13 @@ body {
     background-color: #f5ba13;
     text-align: center;
     padding-top: 1%;
-    width: 100%;
     margin-left: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
 }
 .socials-link {
     padding: 10px;
@@ -47,7 +54,7 @@ body {
     text-decoration: underline;
 }
 #copyright{
-    margin-top: 40px;
+    margin-top: 10px;
     color: #fff;
 }
 
@@ -66,32 +73,11 @@ body {
     border-radius: 7px;
     box-shadow:5px #ccc;
 }
-/* .note h1 {
-    font-size: 1.1em;
-    margin-bottom: 6px;
-}
-.note p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
 
-.note button {
-    position: relative;
-    float: right;
-    margin-right: 10px;
-    color: #f5ba13;
-    border: none;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    outline: none;
-} */
 /************************* CreateArea *************************/
 form.create-note {
     position: relative;
-    width: 480px;
+    width: 50%;
     margin: 30px auto 20px auto;
     background: #fff;
     padding: 15px;
@@ -120,4 +106,10 @@ form.create-note button {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     outline: none;
+}
+/************************* @media *************************/
+@media (max-width: 1000px) {
+    form.create-note {
+        width: 80%;
+    }
 }
